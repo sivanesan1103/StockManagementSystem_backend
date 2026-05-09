@@ -50,8 +50,8 @@ def get_database_url() -> str:
     Returns:
         Database connection URL.
     """
-    if settings and hasattr(settings, 'database_url'):
-        return str(settings.database_url)
+    if settings and hasattr(settings, 'DATABASE_URL'):
+        return str(settings.DATABASE_URL)
 
     # Fallback to environment variable
     database_url = os.getenv("DATABASE_URL") or os.getenv("POSTGRES_URL")

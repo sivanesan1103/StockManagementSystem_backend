@@ -4,10 +4,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 from sqlalchemy import (
-    JSON,
     DateTime,
-    Table,
-    Uuid,
     MetaData,
 )
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column

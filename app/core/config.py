@@ -20,7 +20,6 @@ class Settings(BaseSettings):
 
     # Security
     SECRET_KEY: str = Field(
-        default="CHANGE_ME_IN_PRODUCTION",
         description="Secret key for cryptographic operations",
     )
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7  # 7 days

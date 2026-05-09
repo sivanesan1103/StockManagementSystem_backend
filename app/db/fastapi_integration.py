@@ -118,7 +118,7 @@ def setup_migration_events(app: FastAPI, database_url: Optional[str] = None) -> 
         try:
             from app.core.config import settings
 
-            db_url = database_url or str(settings.database_url)
+            db_url = database_url or str(settings.DATABASE_URL)
         except ImportError:
             # Fallback to environment variable
             db_url = database_url or os.getenv("DATABASE_URL") or os.getenv("POSTGRES_URL")
